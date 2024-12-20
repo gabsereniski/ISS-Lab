@@ -380,3 +380,496 @@ root@servers:/home/servers$ [[2024-12-20 13:05:18]] rsync -a /etc/netplan/ /mnt/
 root@servers:/home/servers$ [[2024-12-20 13:06:34]] mkdir -p /mnt/sharedf/servers/etc/netplan
 root@servers:/home/servers$ [[2024-12-20 13:06:37]] rsync -a /etc/netplan/ /mnt/sharedf/servers/etc/netplan/
 root@servers:/home/servers$ [[2024-12-20 13:07:30]] touch /mnt/sharedf/servers/bash.log
+root@servers:/home/servers$ [[2024-12-20 13:08:01]] cat /var/log/bash_history.log > /mnt/sharedf/servers/bash.log 
+root@servers:/home/servers$ [[2024-12-20 13:10:16]] ls
+root@servers:/home/servers$ [[2024-12-20 13:10:36]] mkdir -p /mnt/sharedf/servers/home/servers/docker
+root@servers:/home/servers$ [[2024-12-20 13:11:05]] rsync -a /home/servers/docker /mnt/sharedf/servers/docker
+root@servers:/home/servers$ [[2024-12-20 13:26:01]] rsync -a /home/servers/docker /mnt/sharedf/servers/home/servers/docker
+root@servers:/home/servers$ [[2024-12-20 13:43:44]] rsync -a /mnt/sharedf/servers/home/servers/docker /home/servers
+root@servers:/home/servers$ [[2024-12-20 13:43:46]] ls
+root@servers:/home/servers$ [[2024-12-20 13:43:51]] ls -a docker
+root@servers:/home/servers$ [[2024-12-20 13:43:57]] tree docker
+root@servers:/home/servers$ [[2024-12-20 13:44:23]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-20 13:44:29]] cd docker
+root@servers:/home/servers/docker$ [[2024-12-20 13:44:35]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-20 13:45:21]] docker-compose up --build
+root@servers:/home/servers/docker$ [[2024-12-20 13:46:11]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-20 13:46:28]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-20 13:48:14]] docker exec -it mysql_server mysql -u root -p
+root@servers:/home/servers/docker$ [[2024-12-20 13:53:52]] rsync -a /mnt/sharedf/servers/home/servers/docker /home/servers
+root@servers:/home/servers/docker$ [[2024-12-20 13:54:03]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-20 13:54:12]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-20 13:54:22]] docker exec -it mysql_server mysql -u root -p
+root@servers:/home/servers/docker$ [[2024-12-20 13:54:22]] docker exec -it mysql_server mysql -u root -p
+root@servers:/home/servers/docker$ [[2024-12-20 13:54:22]] docker exec -it mysql_server mysql -u root -p
+root@servers:/home/servers/docker$ [[2024-12-20 13:57:42]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-20 13:57:48]] rsync -a /mnt/sharedf/servers/home/servers/docker /home/servers
+root@servers:/home/servers/docker$ [[2024-12-20 13:57:52]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-20 13:58:02]] docker exec -it mysql_server mysql -u root -p
+root@servers:/home/servers/docker$ [[2024-12-20 13:58:09]] testroot
+root@servers:/home/servers/docker$ [[2024-12-20 13:58:10]] docker exec -it mysql_server mysql -u root -p
+root@servers:/home/servers/docker$ [[2024-12-20 13:58:10]] docker exec -it mysql_server mysql -u root -p
+root@servers:/home/servers/docker$ [[2024-12-20 13:58:10]] docker exec -it mysql_server mysql -u root -p
+root@servers:/home/servers/docker$ [[2024-12-20 13:58:30]] docker pss
+root@servers:/home/servers/docker$ [[2024-12-20 13:58:31]] docker ps
+root@servers:/home/servers/docker$ [[2024-12-20 13:58:31]] docker ps
+root@servers:/home/servers/docker$ [[2024-12-20 13:58:52]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-20 13:59:01]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-20 13:59:51]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-20 13:59:55]] docker-compose up --build
+root@servers:/home/servers/docker$ [[2024-12-20 14:01:42]] docker-compose down
+root@servers:/home/servers/docker$ [[2024-12-20 14:02:20]] docker volume rm servers_mysql_data
+root@servers:/home/servers/docker$ [[2024-12-20 14:03:09]] docker logs mysql_server
+root@servers:/home/servers/docker$ [[2024-12-20 14:05:40]] docker volume -ls
+root@servers:/home/servers/docker$ [[2024-12-20 14:05:47]] docker volume ls
+root@servers:/home/servers/docker$ [[2024-12-20 14:06:04]] docker volume rm docker_mysql_data
+servers@servers:/home/servers$ [[2024-12-18 16:30:33]] sudo reboot
+servers@servers:/home/servers$ [[2024-12-20 14:33:28]] docker ps
+servers@servers:/home/servers$ [[2024-12-20 14:33:33]] sudo docker ps
+root@servers:/home/servers$ [[2024-12-18 17:48:43]] exit
+root@servers:/home/servers$ [[2024-12-20 14:35:29]] rsync /mnt/sharedf/servers/home/servers/docker/ /home/servers
+root@servers:/home/servers$ [[2024-12-20 14:35:35]] ls
+root@servers:/home/servers$ [[2024-12-20 14:35:41]] ls -a docker
+root@servers:/home/servers$ [[2024-12-20 14:36:12]] rsync /mnt/sharedf/servers/home/servers/docker/ /home/servers/docker/
+root@servers:/home/servers$ [[2024-12-20 14:36:53]] rsync -a /mnt/sharedf/servers/home/servers/docker/ /home/servers/
+root@servers:/home/servers$ [[2024-12-20 14:36:56]] ls -a docker
+root@servers:/home/servers$ [[2024-12-20 14:37:26]] ls -a /mnt/sharedf/servers/home/servers/docker
+root@servers:/home/servers$ [[2024-12-20 14:37:36]] rsync -a /mnt/sharedf/servers/home/servers/docker/ /home/servers/docker
+root@servers:/home/servers$ [[2024-12-20 14:37:38]] ls
+root@servers:/home/servers$ [[2024-12-20 14:37:58]] rm -r mysql mysql-init apache-php/
+root@servers:/home/servers$ [[2024-12-20 14:38:11]] rm docker-compose.yml hash.txt pokemon.csv 
+root@servers:/home/servers$ [[2024-12-20 14:38:13]] ls
+root@servers:/home/servers$ [[2024-12-20 14:38:22]] ls -a docker
+root@servers:/home/servers/docker$ [[2024-12-20 14:39:52]] cd docker
+root@servers:/home/servers/docker$ [[2024-12-20 14:40:00]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-20 14:40:10]] docker-compose up --build
+root@servers:/home/servers/docker$ [[2024-12-20 14:40:53]] docker logs mysql_server
+root@servers:/home/servers/docker$ [[2024-12-20 14:41:14]] docker logs mysql_server | less
+root@servers:/home/servers/docker$ [[2024-12-20 14:41:14]] docker logs mysql_server | less
+root@servers:/home/servers/docker$ [[2024-12-20 14:42:46]] docker logs mysql_server > logs.txt
+root@servers:/home/servers/docker$ [[2024-12-20 14:42:51]] cat logs.txt 
+root@servers:/home/servers/docker$ [[2024-12-20 14:42:56]] cat logs.txt | less
+root@servers:/home/servers/docker$ [[2024-12-20 14:42:56]] cat logs.txt | less
+root@servers:/home/servers/docker$ [[2024-12-20 14:43:10]] less logs.txt 
+root@servers:/home/servers/docker$ [[2024-12-20 14:43:31]] clear
+root@servers:/home/servers/docker$ [[2024-12-20 14:43:35]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-20 14:43:45]] docker-compose up --build
+root@servers:/home/servers/docker$ [[2024-12-20 14:50:04]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-20 14:50:19]] rsync -a /mnt/sharedf/servers/home/servers/docker/ /home/servers/docker
+root@servers:/home/servers/docker$ [[2024-12-20 14:50:22]] docker-compose up --build
+root@servers:/home/servers/docker$ [[2024-12-20 14:50:46]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-20 14:50:49]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-20 14:51:14]] docker ps
+root@servers:/home/servers/docker$ [[2024-12-20 14:51:36]] docker exec -it mysql_server mysql -u root -p
+root@servers:/home/servers/docker$ [[2024-12-20 14:54:46]] docker exec -it mysql_server ls -l /var/lib/mysql-files/
+root@servers:/home/servers/docker$ [[2024-12-20 14:56:49]] docker exec -it mysql_server cat /var/lib/mysql-files/pokemon.csv | head -n 10
+root@servers:/home/servers/docker$ [[2024-12-20 14:58:41]] docker exec -it mysql_server mysql -u root -p
+root@servers:/home/servers/docker$ [[2024-12-20 14:59:52]] rsync -a /mnt/sharedf/servers/home/servers/docker/ /home/servers/docker
+root@servers:/home/servers/docker$ [[2024-12-20 14:59:56]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-20 15:00:04]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-20 15:00:10]] docker ps
+root@servers:/home/servers/docker$ [[2024-12-20 15:00:16]] docker exec -it mysql_server mysql -u root -p
+root@servers:/home/servers/docker$ [[2024-12-20 15:00:16]] docker exec -it mysql_server mysql -u root -p
+root@servers:/home/servers/docker$ [[2024-12-20 15:10:33]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-20 15:10:39]] rsync -a /mnt/sharedf/servers/home/servers/docker/ /home/servers/docker
+root@servers:/home/servers/docker$ [[2024-12-20 15:10:46]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-20 15:10:57]] docker ps
+root@servers:/home/servers/docker$ [[2024-12-20 15:11:02]] docker exec -it mysql_server mysql -u root -p
+root@servers:/home/servers/docker$ [[2024-12-20 15:11:02]] docker exec -it mysql_server mysql -u root -p
+root@servers:/home/servers/docker$ [[2024-12-20 15:11:02]] docker exec -it mysql_server mysql -u root -p
+root@servers:/home/servers/docker$ [[2024-12-20 15:26:42]] docker ps
+root@servers:/home/servers/docker$ [[2024-12-20 15:26:44]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-20 15:26:51]] rsync -a /mnt/sharedf/servers/home/servers/docker/ /home/servers/docker
+root@servers:/home/servers/docker$ [[2024-12-20 15:27:15]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-20 15:27:28]] docker ps
+root@servers:/home/servers/docker$ [[2024-12-20 15:27:34]] docker exec -it mysql_server mysql -u root -p
+root@servers:/home/servers/docker$ [[2024-12-20 15:31:58]] docker-compose down
+root@servers:/home/servers/docker$ [[2024-12-20 15:32:14]] docker volume rm docker_mysql_data
+root@servers:/home/servers/docker$ [[2024-12-20 15:32:24]] docker-compose up build -d
+root@servers:/home/servers/docker$ [[2024-12-20 15:32:27]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-20 15:32:49]] docker exec -it mysql_server mysql -u root -p
+root@servers:/home/servers/docker$ [[2024-12-20 15:35:17]] rsync -a /mnt/sharedf/servers/home/servers/docker/ /home/servers/docker
+root@servers:/home/servers/docker$ [[2024-12-20 15:35:22]] docker-compose down
+root@servers:/home/servers/docker$ [[2024-12-20 15:35:59]] docker volume rm docker_mysql_data
+root@servers:/home/servers/docker$ [[2024-12-20 15:36:01]] rsync -a /mnt/sharedf/servers/home/servers/docker/ /home/servers/docker
+root@servers:/home/servers/docker$ [[2024-12-20 15:36:05]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-20 15:36:19]] docker ps
+root@servers:/home/servers/docker$ [[2024-12-20 15:36:30]] docker exec -it mysql_server mysql -u root -p
+root@servers:/home/servers/docker$ [[2024-12-20 15:37:39]] clear
+root@servers:/home/servers/docker$ [[2024-12-20 15:37:43]] docker-compose down
+root@servers:/home/servers/docker$ [[2024-12-20 15:37:52]] docker volume rm docker_mysql_data
+root@servers:/home/servers/docker$ [[2024-12-20 15:38:02]] rsync -a /mnt/sharedf/servers/home/servers/docker/ /home/servers/docker
+root@servers:/home/servers/docker$ [[2024-12-20 15:38:10]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-20 15:38:24]] docker exec -it mysql_server mysql -u root -p
+root@servers:/home/servers/docker$ [[2024-12-20 15:40:22]] clear
+root@servers:/home/servers/docker$ [[2024-12-20 15:40:25]] rsync -a /mnt/sharedf/servers/home/servers/docker/ /home/servers/docker
+root@servers:/home/servers/docker$ [[2024-12-20 15:40:33]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-20 15:41:01]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-20 15:41:06]] docker ps
+root@servers:/home/servers/docker$ [[2024-12-20 15:41:11]] docker exec -it mysql_server mysql -u root -p
+root@servers:/home/servers/docker$ [[2024-12-20 15:41:11]] docker exec -it mysql_server mysql -u root -p
+root@servers:/home/servers/docker$ [[2024-12-20 15:44:20]] docker logs mysql_server
+root@servers:/home/servers/docker$ [[2024-12-20 15:44:28]] docker logs mysql_server > logs.txt
+root@servers:/home/servers/docker$ [[2024-12-20 15:44:33]] clear
+root@servers:/home/servers/docker$ [[2024-12-20 15:44:40]] less logs.txt 
+root@servers:/home/servers/docker$ [[2024-12-20 15:47:33]] rsync -a /mnt/sharedf/servers/home/servers/docker/ /home/servers/docker
+root@servers:/home/servers/docker$ [[2024-12-20 15:47:37]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-20 15:47:57]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-20 15:48:04]] docker ps
+root@servers:/home/servers/docker$ [[2024-12-20 15:48:08]] docker exec -it mysql_server mysql -u root -p
+root@servers:/home/servers/docker$ [[2024-12-20 15:48:08]] docker exec -it mysql_server mysql -u root -p
+root@servers:/home/servers/docker$ [[2024-12-20 15:59:54]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-20 16:00:01]] rsync -a /mnt/sharedf/servers/home/servers/docker/ /home/servers/docker
+root@servers:/home/servers/docker$ [[2024-12-20 16:00:07]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-20 16:00:21]] docker ps
+root@servers:/home/servers/docker$ [[2024-12-20 16:00:26]] docker exec -it mysql_server mysql -u root -p
+root@servers:/home/servers/docker$ [[2024-12-20 16:07:20]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-20 16:07:27]] rsync -a /mnt/sharedf/servers/home/servers/docker/ /home/servers/docker
+root@servers:/home/servers/docker$ [[2024-12-20 16:07:32]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-20 16:07:41]] docker exec -it mysql_server mysql -u root -p
+root@servers:/home/servers/docker$ [[2024-12-20 16:07:41]] docker exec -it mysql_server mysql -u root -p
+root@servers:/home/servers/docker$ [[2024-12-20 16:07:41]] docker exec -it mysql_server mysql -u root -p
+root@servers:/home/servers/docker$ [[2024-12-20 16:07:41]] docker exec -it mysql_server mysql -u root -p
+root@servers:/home/servers/docker$ [[2024-12-20 16:12:30]] rsync -a /mnt/sharedf/servers/home/servers/docker/ /home/servers/docker
+root@servers:/home/servers/docker$ [[2024-12-20 16:12:33]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-20 16:12:38]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-20 16:12:44]] docker ps
+root@servers:/home/servers/docker$ [[2024-12-20 16:12:49]] docker exec -it mysql_server mysql -u root -p
+root@servers:/home/servers/docker$ [[2024-12-20 16:12:49]] docker exec -it mysql_server mysql -u root -p
+root@servers:/home/servers/docker$ [[2024-12-20 16:14:24]] rsync -a /mnt/sharedf/servers/home/servers/docker/ /home/servers/docker
+root@servers:/home/servers/docker$ [[2024-12-20 16:14:27]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-20 16:14:32]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-20 16:14:45]] docker exec -it mysql_server mysql -u root -p
+root@servers:/home/servers/docker$ [[2024-12-20 16:14:45]] docker exec -it mysql_server mysql -u root -p
+root@servers:/home/servers/docker$ [[2024-12-20 16:15:58]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-20 16:16:20]] rsync -a /mnt/sharedf/servers/home/servers/docker/ /home/servers/docker
+root@servers:/home/servers/docker$ [[2024-12-20 16:16:22]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-20 16:16:22]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-20 16:16:40]] docker exec -it mysql_server mysql -u root -p
+root@servers:/home/servers/docker$ [[2024-12-20 16:17:52]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-20 16:17:59]] rsync -a /mnt/sharedf/servers/home/servers/docker/ /home/servers/docker
+root@servers:/home/servers/docker$ [[2024-12-20 16:18:07]] ls
+root@servers:/home/servers/docker/mysql-init$ [[2024-12-20 16:18:14]] cd mysql-init/
+root@servers:/home/servers/docker/mysql-init$ [[2024-12-20 16:18:14]] ls
+root@servers:/home/servers/docker/mysql-init$ [[2024-12-20 16:18:22]] cat insert_statements.sql | less
+root@servers:/home/servers/docker/mysql-init$ [[2024-12-20 16:18:43]] clear
+root@servers:/home/servers$ [[2024-12-20 16:18:49]] cd ../..
+root@servers:/home/servers/docker$ [[2024-12-20 16:18:51]] cd docker
+root@servers:/home/servers/docker$ [[2024-12-20 16:19:01]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-20 16:19:26]] docker exec -it mysql_server mysql -u root -p
+root@servers:/home/servers/docker$ [[2024-12-20 16:20:44]] docker volume rm docker_mysql_server
+root@servers:/home/servers/docker$ [[2024-12-20 16:20:56]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-20 16:21:53]] rm a.sql
+root@servers:/home/servers/docker$ [[2024-12-20 16:21:58]] rm mysql-init/a.sql
+root@servers:/home/servers/docker$ [[2024-12-20 16:22:13]] rm mysql-init/create_tables.sql 
+root@servers:/home/servers/docker$ [[2024-12-20 16:22:18]] rm mysql-init/insert_statements.sql 
+root@servers:/home/servers/docker$ [[2024-12-20 16:22:23]] rm mysql-init/pokemon.csv 
+root@servers:/home/servers/docker$ [[2024-12-20 16:22:24]] ls
+root@servers:/home/servers/docker$ [[2024-12-20 16:22:33]] ls mysql-init/
+root@servers:/home/servers/docker$ [[2024-12-20 16:22:42]] rm mysql-init/init.sql
+root@servers:/home/servers/docker$ [[2024-12-20 16:23:11]] less mysql-init/01-insert_statements.sql 
+root@servers:/home/servers/docker$ [[2024-12-20 16:23:11]] less mysql-init/01-insert_statements.sql 
+root@servers:/home/servers/docker$ [[2024-12-20 16:24:01]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-20 16:25:46]] rsync -a /mnt/sharedf/servers/home/servers/docker/ /home/servers/docker
+root@servers:/home/servers/docker$ [[2024-12-20 16:25:48]] ls
+root@servers:/home/servers/docker/mysql-init$ [[2024-12-20 16:26:02]] cd mysql-init/
+root@servers:/home/servers/docker/mysql-init$ [[2024-12-20 16:26:03]] ls
+root@servers:/home/servers/docker/mysql-init$ [[2024-12-20 16:26:10]] less 01-insert_statements.sql 
+root@servers:/home/servers/docker/mysql-init$ [[2024-12-20 16:27:04]] rsync -a /mnt/sharedf/servers/home/servers/docker/ /home/servers/docker/
+root@servers:/home/servers/docker/mysql-init$ [[2024-12-20 16:27:08]] ls
+                                                                                                     servers@servers:/home/servers$ [[2024-12-18 16:30:33]] sudo reboot
+servers@servers:/home/servers$ [[2024-12-20 16:28:21]] ls
+servers@servers:/home/servers/docker$ [[2024-12-20 16:28:25]] cd docker
+root@servers:/home/servers/docker$ [[2024-12-18 17:48:43]] exit
+root@servers:/home/servers/docker$ [[2024-12-20 16:28:29]] ls
+root@servers:/home/servers/docker$ [[2024-12-20 16:29:13]] rsync -a /mnt/sharedf/servers/home/servers/docker/ /home/servers/docker
+root@servers:/home/servers/docker$ [[2024-12-20 16:29:13]] rsync -a /mnt/sharedf/servers/home/servers/docker/ /home/servers/docker
+root@servers:/home/servers/docker$ [[2024-12-20 16:29:13]] rsync -a /mnt/sharedf/servers/home/servers/docker/ /home/servers/docker
+root@servers:/home/servers/docker$ [[2024-12-20 16:29:13]] rsync -a /mnt/sharedf/servers/home/servers/docker/ /home/servers/docker
+root@servers:/home/servers/docker$ [[2024-12-20 16:29:16]] ls
+root@servers:/home/servers/docker/mysql-init$ [[2024-12-20 16:29:33]] cd mysql-init/
+root@servers:/home/servers/docker/mysql-init$ [[2024-12-20 16:29:36]] less 01-insert_statements.sql 
+root@servers:/home/servers/docker/mysql-init$ [[2024-12-20 16:29:36]] less 01-insert_statements.sql 
+root@servers:/home/servers/docker/mysql-init$ [[2024-12-20 16:29:47]] clear
+root@servers:/home/servers/docker/mysql-init$ [[2024-12-20 16:29:54]] docker ps
+root@servers:/home/servers/docker/mysql-init$ [[2024-12-20 16:30:14]] docker volume rm docker_mysql_server
+root@servers:/home/servers/docker$ [[2024-12-20 16:30:25]] cd ..
+root@servers:/home/servers/docker$ [[2024-12-20 16:30:35]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-20 16:30:35]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-20 16:30:50]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-20 16:30:55]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-20 16:31:42]] docker exec -it mysql_server mysql -u root -p
+root@servers:/home/servers/docker$ [[2024-12-20 16:49:51]] rsync -a /mnt/sharedf/servers/home/servers/docker/ /home/servers/docker
+root@servers:/home/servers/docker$ [[2024-12-20 16:49:55]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-20 16:50:00]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-20 16:50:15]] docker logs mysql_server
+root@servers:/home/servers/docker$ [[2024-12-20 16:51:20]] docker exec -it mysql_server mysql -u root -p
+root@servers:/home/servers/docker$ [[2024-12-20 16:52:37]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-20 16:52:43]] rsync -a /mnt/sharedf/servers/home/servers/docker/ /home/servers/docker
+root@servers:/home/servers/docker$ [[2024-12-20 16:52:46]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-20 16:52:54]] docker exec -it mysql_server mysql -u root -p
+root@servers:/home/servers/docker$ [[2024-12-20 16:52:54]] docker exec -it mysql_server mysql -u root -p
+root@servers:/home/servers/docker$ [[2024-12-20 16:53:11]] docker logs mysql_server
+root@servers:/home/servers/docker$ [[2024-12-20 16:53:53]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-20 16:54:01]] rsync -a /mnt/sharedf/servers/home/servers/docker/ /home/servers/docker
+root@servers:/home/servers/docker$ [[2024-12-20 16:54:05]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-20 16:54:11]] docker logs mysql_server
+root@servers:/home/servers/docker$ [[2024-12-20 16:54:41]] docker exec -it mysql_server mysql -u root -p
+root@servers:/home/servers/docker$ [[2024-12-20 16:59:18]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-20 16:59:23]] rsync -a /mnt/sharedf/servers/home/servers/docker/ /home/servers/docker
+root@servers:/home/servers/docker$ [[2024-12-20 16:59:28]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-20 16:59:36]] docker logs mysql_server
+root@servers:/home/servers/docker$ [[2024-12-20 16:59:36]] docker logs mysql_server
+root@servers:/home/servers/docker$ [[2024-12-20 17:02:46]] clear
+root@servers:/home/servers/docker$ [[2024-12-20 17:02:47]] docker logs mysql_server
+root@servers:/home/servers/docker$ [[2024-12-20 17:02:50]] clear
+root@servers:/home/servers/docker$ [[2024-12-20 17:02:56]] docker logs mysql_server > logs.txt
+root@servers:/home/servers/docker$ [[2024-12-20 17:03:03]] less logs.txt
+root@servers:/home/servers/docker$ [[2024-12-20 17:03:03]] less logs.txt
+root@servers:/home/servers/docker$ [[2024-12-20 17:03:09]] clear
+root@servers:/home/servers/docker$ [[2024-12-20 17:03:10]] less logs.txt
+root@servers:/home/servers/docker$ [[2024-12-20 17:03:10]] less logs.txt
+root@servers:/home/servers/docker$ [[2024-12-20 17:03:34]] docker exec -it mysql_server mysql -u root -p
+root@servers:/home/servers/docker$ [[2024-12-20 17:05:44]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-20 17:05:52]] rsync -a /mnt/sharedf/servers/home/servers/docker/ /home/servers/docker
+root@servers:/home/servers/docker$ [[2024-12-20 17:05:59]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-20 17:06:07]] docker logs mysql_server > logs.txt
+root@servers:/home/servers/docker$ [[2024-12-20 17:06:15]] clear
+root@servers:/home/servers/docker$ [[2024-12-20 17:06:16]] docker logs mysql_server > logs.txt
+root@servers:/home/servers/docker$ [[2024-12-20 17:09:27]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-20 17:09:39]] rsync -a /mnt/sharedf/servers/home/servers/docker/ /home/servers/docker
+root@servers:/home/servers/docker$ [[2024-12-20 17:09:42]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-20 17:09:57]] docker logs mysql_server > logs.txt
+root@servers:/home/servers/docker$ [[2024-12-20 17:10:07]] clear
+root@servers:/home/servers/docker$ [[2024-12-20 17:10:08]] docker logs mysql_server > logs.txt
+root@servers:/home/servers/docker$ [[2024-12-20 17:10:47]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-20 17:10:57]] rsync -a /mnt/sharedf/servers/home/servers/docker/ /home/servers/docker
+root@servers:/home/servers/docker$ [[2024-12-20 17:11:01]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-20 17:11:07]] docker logs mysql_server > logs.txt
+root@servers:/home/servers/docker$ [[2024-12-20 17:11:07]] docker logs mysql_server > logs.txt
+servers@servers:/home/servers$ [[2024-12-18 16:30:33]] sudo reboot
+root@servers:/home/servers$ [[2024-12-18 17:48:43]] exit
+root@servers:/home/servers$ [[2024-12-20 17:12:48]] rsync -a /mnt/sharedf/servers/home/servers/docker/ /home/servers/docker/
+root@servers:/home/servers$ [[2024-12-20 17:12:48]] rsync -a /mnt/sharedf/servers/home/servers/docker/ /home/servers/docker/
+root@servers:/home/servers$ [[2024-12-20 17:12:52]] cclear
+root@servers:/home/servers$ [[2024-12-20 17:12:54]] clear
+root@servers:/home/servers$ [[2024-12-20 17:13:12]] less docker/mysql-init/01-insert_statements.sql 
+root@servers:/home/servers$ [[2024-12-20 17:13:12]] less docker/mysql-init/01-insert_statements.sql 
+root@servers:/home/servers$ [[2024-12-20 17:14:50]] clear
+root@servers:/home/servers/docker$ [[2024-12-20 17:14:55]] cd docker
+root@servers:/home/servers/docker$ [[2024-12-20 17:15:04]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-20 17:15:18]] docker logs mysql_server
+root@servers:/home/servers/docker$ [[2024-12-20 17:15:18]] docker logs mysql_server
+root@servers:/home/servers/docker$ [[2024-12-20 17:15:24]] clear
+root@servers:/home/servers/docker$ [[2024-12-20 17:15:30]] docker logs mysql_server > logs.txt
+root@servers:/home/servers/docker$ [[2024-12-20 17:15:51]] docker exec -it mysql_server mysql -u root -p
+root@servers:/home/servers/docker$ [[2024-12-20 17:16:36]] clear
+root@servers:/home/servers/docker$ [[2024-12-20 17:16:43]] docker volume ps
+root@servers:/home/servers/docker$ [[2024-12-20 17:16:56]] docker volume rm mysql_server_data
+root@servers:/home/servers/docker$ [[2024-12-20 17:17:01]] docker volume
+root@servers:/home/servers/docker$ [[2024-12-20 17:17:05]] docker volume ls
+root@servers:/home/servers/docker$ [[2024-12-20 17:17:16]] docker volume rm docker_mysql_data
+root@servers:/home/servers/docker$ [[2024-12-20 17:17:30]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-20 17:17:35]] docker volume rm docker_mysql_data
+root@servers:/home/servers/docker$ [[2024-12-20 17:17:50]] rsync -a /mnt/sharedf/servers/home/servers/docker/ /home/servers/docker/
+root@servers:/home/servers/docker$ [[2024-12-20 17:17:53]] ls
+root@servers:/home/servers/docker$ [[2024-12-20 17:18:06]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-20 17:18:20]] docker logs mysql_server > logs.txt
+servers@servers:/home/servers$ [[2024-12-20 17:12:08]] sudo su
+root@servers:/home/servers$ [[2024-12-20 17:22:53]] exit
+root@servers:/home/servers$ [[2024-12-20 17:23:01]] clear
+root@servers:/home/servers/docker$ [[2024-12-20 17:23:03]] cd docker
+root@servers:/home/servers/docker$ [[2024-12-20 17:23:06]] rsync -a /mnt/sharedf/servers/home/servers/docker/ /home/servers/docker/
+root@servers:/home/servers/docker$ [[2024-12-20 17:23:20]] docker volume rm docker_mysql_data
+root@servers:/home/servers/docker$ [[2024-12-20 17:23:29]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-20 17:23:36]] docker volume rm docker_mysql_data
+root@servers:/home/servers/docker$ [[2024-12-20 17:23:43]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-20 17:23:52]] docker logs mysql_server > logs.txt
+root@servers:/home/servers/docker$ [[2024-12-20 17:23:52]] docker logs mysql_server > logs.txt
+root@servers:/home/servers/docker$ [[2024-12-20 17:27:21]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-20 17:27:28]] rsync -a /mnt/sharedf/servers/home/servers/docker/ /home/servers/docker/
+root@servers:/home/servers/docker$ [[2024-12-20 17:27:31]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-20 17:27:35]] docker logs mysql_server > logs.txt
+root@servers:/home/servers/docker$ [[2024-12-20 17:27:39]] clear
+root@servers:/home/servers/docker$ [[2024-12-20 17:27:40]] docker logs mysql_server > logs.txt
+root@servers:/home/servers/docker$ [[2024-12-20 17:27:50]] clear
+root@servers:/home/servers/docker$ [[2024-12-20 17:27:51]] docker logs mysql_server > logs.txt
+root@servers:/home/servers/docker$ [[2024-12-20 17:28:37]] ls
+root@servers:/home/servers/docker/mysql-init$ [[2024-12-20 17:28:43]] cd mysql-init/
+root@servers:/home/servers/docker/mysql-init$ [[2024-12-20 17:28:44]] ls
+root@servers:/home/servers/docker/mysql-init$ [[2024-12-20 17:29:03]] rm 01-insert_statements.sql 
+root@servers:/home/servers/docker/mysql-init$ [[2024-12-20 17:29:04]] ls
+root@servers:/home/servers/docker$ [[2024-12-20 17:29:10]] cd ..
+root@servers:/home/servers/docker$ [[2024-12-20 17:29:20]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-20 17:29:31]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-20 17:29:37]] clear
+root@servers:/home/servers/docker$ [[2024-12-20 17:29:41]] docker logs mysql_server > logs.txt
+root@servers:/home/servers/docker$ [[2024-12-20 17:29:45]] clear
+root@servers:/home/servers/docker$ [[2024-12-20 17:29:46]] docker logs mysql_server > logs.txt
+root@servers:/home/servers/docker$ [[2024-12-20 17:29:56]] clear
+root@servers:/home/servers/docker$ [[2024-12-20 17:29:57]] docker logs mysql_server > logs.txt
+root@servers:/home/servers/docker$ [[2024-12-20 17:30:08]] cclear
+root@servers:/home/servers/docker$ [[2024-12-20 17:30:09]] clear
+root@servers:/home/servers/docker$ [[2024-12-20 17:30:26]] docker exec -it mysql_server mysql -u root -p
+root@servers:/home/servers/docker$ [[2024-12-20 18:15:56]] docker exec -it secure_apache_php bash
+root@servers:/home/servers/docker$ [[2024-12-20 18:16:02]] docker exec -it apache_php bash
+root@servers:/root$ [[2024-12-20 18:44:54]] cd
+root@servers:/home/servers/docker$ [[2024-12-20 18:45:07]] cd /home/servers/docker
+root@servers:/home/servers/docker$ [[2024-12-20 18:45:08]] ls
+root@servers:/home/servers/docker$ [[2024-12-20 18:45:16]] rm -r mysql-init/
+root@servers:/home/servers/docker$ [[2024-12-20 18:45:36]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-20 18:46:24]] rsync -a /mnt/sharedf/servers/home/servers/docker/ /home/servers/docker/
+root@servers:/home/servers/docker$ [[2024-12-20 18:46:26]] ls
+root@servers:/home/servers/docker/mysql-init$ [[2024-12-20 18:46:31]] cd mysql-init/
+root@servers:/home/servers/docker/mysql-init$ [[2024-12-20 18:46:31]] ls
+root@servers:/home/servers/docker$ [[2024-12-20 18:46:34]] cd ..
+root@servers:/home/servers/docker$ [[2024-12-20 18:46:51]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-20 18:47:04]] docker logs mysql_server > logs.txt
+root@servers:/home/servers/docker$ [[2024-12-20 18:47:14]] clear
+root@servers:/home/servers/docker$ [[2024-12-20 18:47:15]] docker logs mysql_server > logs.txt
+root@servers:/home/servers/docker$ [[2024-12-20 18:49:02]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-20 18:49:16]] rsync -a /mnt/sharedf/servers/home/servers/docker/ /home/servers/docker/
+root@servers:/home/servers/docker$ [[2024-12-20 18:49:23]] docker logs mysql_server > logs.txt
+root@servers:/home/servers/docker$ [[2024-12-20 18:49:29]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-20 18:49:34]] docker logs mysql_server > logs.txt
+root@servers:/home/servers/docker$ [[2024-12-20 18:49:34]] docker logs mysql_server > logs.txt
+root@servers:/home/servers/docker$ [[2024-12-20 18:49:34]] docker logs mysql_server > logs.txt
+root@servers:/home/servers/docker$ [[2024-12-20 18:49:34]] docker logs mysql_server > logs.txt
+root@servers:/home/servers/docker$ [[2024-12-20 18:50:01]] docker exec -it secure_apache_php bash
+servers@servers:/home/servers$ [[2024-12-20 17:12:08]] sudo su
+root@servers:/home/servers$ [[2024-12-20 18:50:06]] exit
+root@servers:/home/servers/docker$ [[2024-12-20 18:50:18]] cd docker
+root@servers:/home/servers/docker$ [[2024-12-20 18:50:41]] docker exec -it mysql_server mysql -u root -p
+root@servers:/home/servers/docker$ [[2024-12-20 18:54:07]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-20 18:54:15]] rsync -a /mnt/sharedf/servers/home/servers/docker/ /home/servers/docker/
+root@servers:/home/servers/docker$ [[2024-12-20 18:54:21]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-20 18:54:32]] docker logs mysql_server > logs.txt
+root@servers:/home/servers/docker$ [[2024-12-20 18:54:32]] docker logs mysql_server > logs.txt
+root@servers:/home/servers/docker$ [[2024-12-20 18:56:02]] clear
+root@servers:/home/servers/docker$ [[2024-12-20 18:56:05]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-20 18:56:12]] rsync -a /mnt/sharedf/servers/home/servers/docker/ /home/servers/docker/
+root@servers:/home/servers/docker$ [[2024-12-20 18:56:17]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-20 18:56:21]] docker logs mysql_server > logs.txt
+root@servers:/home/servers/docker$ [[2024-12-20 18:56:21]] docker logs mysql_server > logs.txt
+root@servers:/home/servers/docker$ [[2024-12-20 18:56:21]] docker logs mysql_server > logs.txt
+root@servers:/home/servers/docker$ [[2024-12-20 18:56:21]] docker logs mysql_server > logs.txt
+root@servers:/home/servers/docker$ [[2024-12-20 18:56:21]] docker logs mysql_server > logs.txt
+root@servers:/home/servers/docker$ [[2024-12-20 18:56:21]] docker logs mysql_server > logs.txt
+root@servers:/home/servers/docker$ [[2024-12-20 18:56:21]] docker logs mysql_server > logs.txt
+root@servers:/home/servers/docker$ [[2024-12-20 18:56:21]] docker logs mysql_server > logs.txt
+root@servers:/home/servers/docker$ [[2024-12-20 18:56:21]] docker logs mysql_server > logs.txt
+root@servers:/home/servers/docker$ [[2024-12-20 18:56:47]] clear
+root@servers:/home/servers/docker$ [[2024-12-20 18:56:52]] docker exec -it mysql_server mysql -u root -p
+root@servers:/home/servers/docker$ [[2024-12-20 18:58:47]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-20 18:58:55]] rsync -a /mnt/sharedf/servers/home/servers/docker/ /home/servers/docker/
+root@servers:/home/servers/docker$ [[2024-12-20 19:04:49]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-20 19:05:04]] docker logs mysql_server > logs.txt
+root@servers:/home/servers/docker$ [[2024-12-20 19:05:04]] docker logs mysql_server > logs.txt
+root@servers:/home/servers/docker$ [[2024-12-20 19:05:04]] docker logs mysql_server > logs.txt
+root@servers:/home/servers/docker$ [[2024-12-20 19:05:34]] docker exec -it mysql_server mysql -u root -p
+root@servers:/home/servers/docker$ [[2024-12-20 19:11:18]] clear
+root@servers:/home/servers/docker$ [[2024-12-20 19:11:21]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-20 19:11:26]] rsync -a /mnt/sharedf/servers/home/servers/docker/ /home/servers/docker/
+root@servers:/home/servers/docker$ [[2024-12-20 19:11:29]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-20 19:11:37]] docker ps
+root@servers:/home/servers/docker$ [[2024-12-20 19:12:01]] docker logs mysql_server
+root@servers:/home/servers/docker$ [[2024-12-20 19:12:01]] docker logs mysql_server
+root@servers:/home/servers/docker$ [[2024-12-20 19:21:25]] tree
+root@servers:/home/servers/docker$ [[2024-12-20 19:26:34]] rsync -a /mnt/sharedf/servers/home/servers/docker/ /home/servers/docker/
+root@servers:/home/servers/docker$ [[2024-12-20 19:26:35]] ls
+root@servers:/home/servers/docker$ [[2024-12-20 19:26:43]] chmod +x restart.sh 
+root@servers:/home/servers/docker$ [[2024-12-20 19:26:47]] ./restart.sh 
+root@servers:/home/servers/docker$ [[2024-12-20 19:28:28]] ls
+root@servers:/home/servers/docker$ [[2024-12-20 19:28:28]] ls
+root@servers:/home/servers$ [[2024-12-20 19:28:31]] cd ..
+root@servers:/home/servers$ [[2024-12-20 19:28:32]] ls
+root@servers:/home$ [[2024-12-20 19:28:34]] cd ..
+root@servers:/home$ [[2024-12-20 19:28:35]] la
+root@servers:/home$ [[2024-12-20 19:28:36]] ls
+root@servers:/home/servers$ [[2024-12-20 19:28:38]] cd servers/
+root@servers:/home/servers$ [[2024-12-20 19:28:40]] ls
+root@servers:/home/servers/docker$ [[2024-12-20 19:28:45]] cd docker
+root@servers:/home/servers/docker$ [[2024-12-20 19:28:46]] ls
+root@servers:/home/servers/docker$ [[2024-12-20 19:29:08]] ./restart.sh 
+root@servers:/home/servers/docker$ [[2024-12-20 19:29:19]] rm -r docker
+root@servers:/home/servers/docker$ [[2024-12-20 19:29:33]] rsync -a /mnt/sharedf/servers/home/servers/docker/ /home/servers
+root@servers:/home/servers/docker$ [[2024-12-20 19:29:34]] ls
+root@servers:/home/servers$ [[2024-12-20 19:29:39]] cd ..
+root@servers:/home/servers$ [[2024-12-20 19:29:40]] ls
+root@servers:/home/servers$ [[2024-12-20 19:29:54]] rm -r apache-php/
+root@servers:/home/servers$ [[2024-12-20 19:30:00]] rm -r mysql
+root@servers:/home/servers$ [[2024-12-20 19:30:05]] rm hash.txt
+root@servers:/home/servers$ [[2024-12-20 19:30:19]] rm pokemon.csv create-insert.py docker-compose.yml insert_statements.sql 
+root@servers:/home/servers$ [[2024-12-20 19:30:19]] ;s
+root@servers:/home/servers$ [[2024-12-20 19:30:20]] ls
+root@servers:/home/servers$ [[2024-12-20 19:30:26]] rm -r mysql-init/
+root@servers:/home/servers$ [[2024-12-20 19:30:26]] ls
+root@servers:/home/servers$ [[2024-12-20 19:30:31]] rm restart.sh 
+root@servers:/home/servers/docker$ [[2024-12-20 19:30:33]] cd docker
+root@servers:/home/servers/docker$ [[2024-12-20 19:30:34]] ls
+root@servers:/home/servers/docker$ [[2024-12-20 19:31:35]] rsync -a /mnt/sharedf/servers/home/servers/docker/ /home/servers/docker/
+root@servers:/home/servers/docker$ [[2024-12-20 19:31:37]] ls
+root@servers:/home/servers/docker$ [[2024-12-20 19:31:53]] chmod +x restart.sh
+root@servers:/home/servers/docker$ [[2024-12-20 19:32:21]] ./restart.sh 
+root@servers:/home/servers/docker$ [[2024-12-20 19:32:39]] ls
+root@servers:/home/servers$ [[2024-12-20 19:32:41]] cd ..
+root@servers:/home/servers$ [[2024-12-20 19:32:42]] ls
+root@servers:/home/servers/docker$ [[2024-12-20 19:32:45]] cd docker
+root@servers:/home/servers/docker$ [[2024-12-20 19:32:46]] ls
+root@servers:/home/servers/docker/docker$ [[2024-12-20 19:32:52]] cd docker
+root@servers:/home/servers/docker/docker$ [[2024-12-20 19:32:52]] ls
+root@servers:/home/servers/docker$ [[2024-12-20 19:33:55]] cd ..
+root@servers:/home/servers/docker$ [[2024-12-20 19:33:58]] rm -r docker
+root@servers:/home/servers/docker$ [[2024-12-20 19:34:03]] rsync -a /mnt/sharedf/servers/home/servers/docker/ /home/servers/docker/
+root@servers:/home/servers/docker$ [[2024-12-20 19:34:05]] ls
+root@servers:/home/servers$ [[2024-12-20 19:34:08]] cd ..
+root@servers:/home/servers$ [[2024-12-20 19:34:08]] ls
+root@servers:/home/servers/docker$ [[2024-12-20 19:34:11]] cd docker
+root@servers:/home/servers/docker$ [[2024-12-20 19:34:12]] ls
+root@servers:/home/servers/docker$ [[2024-12-20 19:34:17]] ./restart.sh 
+root@servers:/home/servers/docker$ [[2024-12-20 19:34:48]] ls
+root@servers:/home/servers/docker$ [[2024-12-20 19:34:48]] ls
+root@servers:/home/servers$ [[2024-12-20 19:34:52]] cd ..
+root@servers:/home/servers$ [[2024-12-20 19:34:54]] ls
+root@servers:/home/servers/docker$ [[2024-12-20 19:34:56]] cd docker
+root@servers:/home/servers/docker$ [[2024-12-20 19:34:57]] ls
+root@servers:/home/servers/docker$ [[2024-12-20 19:35:16]] docker ps
+root@servers:/home/servers/docker$ [[2024-12-20 19:43:43]] ./restart.sh 
+root@servers:/home/servers/docker$ [[2024-12-20 19:44:08]] docker ps
+root@servers:/home/servers/docker$ [[2024-12-20 19:44:13]] nano restart.sh 
+root@servers:/home/servers/docker$ [[2024-12-20 19:44:18]] ls
+root@servers:/home/servers/docker$ [[2024-12-20 19:44:18]] ls
+root@servers:/home/servers$ [[2024-12-20 19:44:21]] cd ..
+root@servers:/home/servers$ [[2024-12-20 19:44:22]] ls
+root@servers:/home/servers/docker$ [[2024-12-20 19:44:24]] cd docker
+root@servers:/home/servers/docker$ [[2024-12-20 19:44:27]] ls
+root@servers:/home/servers/docker$ [[2024-12-20 19:44:40]] nano restart.sh 
+root@servers:/home/servers$ [[2024-12-20 19:45:00]] cd ..
+root@servers:/home/servers/docker$ [[2024-12-20 19:45:04]] cd docker/
+root@servers:/home/servers/docker$ [[2024-12-20 19:45:09]] ./restart.sh 
+root@servers:/home/servers/docker$ [[2024-12-20 19:45:36]] cd ../docker
+root@servers:/home/servers/docker$ [[2024-12-20 19:45:37]] ls
+root@servers:/home/servers/docker$ [[2024-12-20 19:51:31]] ./restart.sh 
+root@servers:/home/servers/docker$ [[2024-12-20 19:57:19]] ls
+root@servers:/home/servers$ [[2024-12-20 19:57:25]] cd ../
+root@servers:/home/servers/docker$ [[2024-12-20 19:57:29]] cd docker/
+root@servers:/home/servers/docker$ [[2024-12-20 19:57:30]] ls
+root@servers:/home/servers/docker$ [[2024-12-20 19:57:35]] ./restart.sh 
+root@servers:/home/servers/docker$ [[2024-12-20 19:58:12]] cd ../docker
+root@servers:/home/servers/docker$ [[2024-12-20 19:58:13]] ls
+root@servers:/home/servers/docker$ [[2024-12-20 19:58:16]] cat restart.sh 
+root@servers:/home/servers/docker$ [[2024-12-20 20:03:06]] ./restart.sh 
+root@servers:/home/servers/docker$ [[2024-12-20 20:12:54]] cd ../docker
+root@servers:/home/servers/docker$ [[2024-12-20 20:12:55]] ./restart.sh 
+root@servers:/home/servers/docker$ [[2024-12-20 20:13:26]] cd ../docker
+root@servers:/home/servers/docker$ [[2024-12-20 20:25:01]] ./restart.sh 
+root@servers:/home/servers/docker$ [[2024-12-20 20:27:53]] cd ../docker
+root@servers:/home/servers/docker$ [[2024-12-20 20:27:54]] ./restart.sh 
+root@servers:/home/servers/docker$ [[2024-12-20 20:27:54]] ./restart.sh 
+root@servers:/home/servers/docker$ [[2024-12-20 20:33:31]] cd ../docker
+root@servers:/home/servers/docker$ [[2024-12-20 20:33:33]] ./restart.sh 
+root@servers:/home/servers/docker$ [[2024-12-20 20:38:24]] rsync -a /home/servers /mnt/sharedf/docker/home/servers
+root@servers:/home/servers/docker$ [[2024-12-20 20:38:57]] tree /mnt/sharedf/
+root@servers:/home/servers/docker$ [[2024-12-20 20:39:17]] ls /mnt/sharedf
+root@servers:/home/servers/docker$ [[2024-12-20 20:39:26]] ls /mnt/sharedf/servers/
+root@servers:/home/servers/docker$ [[2024-12-20 20:39:45]] rsync -a /home/servers /mnt/sharedf/servers/home/servers
