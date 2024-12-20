@@ -1,0 +1,382 @@
+2024-12-15 21:31:26 | root | /etc/audit | 2024-12-15 21:31:26 source /etc/bash.bashrc 
+2024-12-15 21:31:32 | root | /etc/audit | 2024-12-15 21:31:32 ls -l
+2024-12-15 21:31:36 | root | /etc | 2024-12-15 21:31:36 cd /etc
+2024-12-15 21:31:50 | root | /etc | 2024-12-15 21:31:50 cat /var/log/bash_history.log 
+2024-12-15 21:32:56 | root | /root | 2024-12-15 21:32:56 cd ~
+2024-12-15 21:33:00 | root | /root | 2024-12-15 21:33:00 pwd
+2024-12-15 21:33:37 | root | /root | 2024-12-15 21:33:35 apt install -y apt-transport-https ca-certificates curl software-properties-common
+2024-12-15 21:34:35 | root | /root | 2024-12-15 21:34:35 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+2024-12-15 21:36:21 | root | /root | 2024-12-15 21:36:21 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list
+2024-12-15 21:36:30 | root | /root | 2024-12-15 21:36:29 sudo apt update
+2024-12-15 21:37:05 | root | /root | 2024-12-15 21:36:52 sudo apt install -y docker-ce docker-ce-cli containerd.io
+2024-12-15 21:37:12 | root | /root | 2024-12-15 21:37:12 sudo systemctl enable docker
+2024-12-15 21:37:21 | root | /root | 2024-12-15 21:37:21 sudo systemctl start docker
+2024-12-15 21:37:37 | root | /root | 2024-12-15 21:37:37 sudo docker network create servers_net
+2024-12-15 21:38:25 | root | /root | 2024-12-15 21:38:11 sudo docker run -d --name apache_server --network servers_net -p 80:80 php:7.4-apache
+2024-12-15 21:39:13 | root | /root | 2024-12-15 21:39:12 docker stop apache_server
+2024-12-15 21:39:17 | root | /root | 2024-12-15 21:39:17 docker rm apache_server
+2024-12-15 21:40:01 | root | /root | 2024-12-15 21:39:59 sudo docker run -d --name apache_server --network servers_net -p 80:80 -v apache_html:/var/www/html php:7.4-apache
+2024-12-15 21:40:10 | root | /root | 2024-12-15 21:40:10 docker ps
+2024-12-15 21:40:18 | root | /root | 2024-12-15 21:40:18 curl localhost
+2024-12-15 21:42:16 | root | /root | 2024-12-15 21:42:16 sudo docker run -d --name mysql_server --network servers_net -e MYSQL_ROOT_PASSWORD=mysql -e MYSQL_DATABASE=db =p 3306:3306 mysql:5.7
+2024-12-15 21:43:26 | root | /root | 2024-12-15 21:43:12 docker run -d --name mysql_server --network servers_net -e MYSQL_ROOT_PASSWORD=mysql -e MYSQL_DATABASE=db -p 3306:3306 mysql:5.7
+2024-12-15 21:44:06 | root | /root | 2024-12-15 21:44:06 mysql -h localhost -u mysql -proot
+2024-12-15 21:45:12 | root | /root | 2024-12-15 21:45:12 sudo docker ps
+2024-12-15 21:45:28 | root | /root | 2024-12-15 21:45:25 sudo apt install mysql-client -y
+2024-12-15 21:45:42 | root | /root | 2024-12-15 21:45:42 mysql -h localhost -u mysql -proot
+2024-12-15 21:45:47 | root | /root | 2024-12-15 21:45:47 mysql -h localhost -u root -proot
+2024-12-15 21:46:45 | root | /root | 2024-12-15 21:46:45 docker rm mysql_server
+2024-12-15 21:46:57 | root | /root | 2024-12-15 21:46:52 docker stop mysql_server
+2024-12-15 21:46:59 | root | /root | 2024-12-15 21:46:59 docker rm mysql_server
+2024-12-15 21:47:17 | root | /root | 2024-12-15 21:47:16 docker run -d --name mysql_server --network servers_net -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=mysql_db -p 3306:3306 mysql:5.7
+2024-12-15 21:47:22 | root | /root | 2024-12-15 21:47:22 mysql -h localhost -u root -proot
+2024-12-15 21:47:41 | root | /root | 2024-12-15 21:47:41 docker start mysql_server
+2024-12-15 21:47:45 | root | /root | 2024-12-15 21:47:45 mysql -h localhost -u root -proot
+2024-12-15 21:49:00 | root | /root | 2024-12-15 21:48:59 docker ps
+2024-12-15 21:49:36 | root | /root | 2024-12-15 21:49:23 mysql -h 127.0.0.1 -P 3306 -u root -proot
+2024-12-16 14:02:28 | root | /root | 2024-12-16 14:02:28 cat /var/log/bash_history.log 
+2024-12-16 14:27:55 | servers | /home/servers | 2024-12-16 14:27:55 sudo chmod 666 /var/log/bash_history.log 
+2024-12-16 14:28:19 | servers | /home/servers | 2024-12-16 14:28:19 sudo chown root:root /var/log/bash_history.log 
+2024-12-16 14:29:02 | servers | /home/servers | 2024-12-16 14:28:57 sudo nano /var/log/bash_history.log 
+2024-12-16 14:36:11 | servers | /home/servers | 2024-12-16 14:29:09 sudo nano /etc/bash.bashrc 
+2024-12-16 14:36:42 | servers | /home/servers | 2024-12-16 14:36:42 source /etc/bash.bashrc 
+2024-12-16 14:36:45 | servers | /home/servers | 2024-12-16 14:36:45 ls -a
+2024-12-16 14:37:15 | servers | /home/servers | 2024-12-16 14:37:15 cat /var/log/bash_history.log 
+2024-12-16 14:39:07 | servers | /home/servers | 2024-12-16 14:39:06 sudo apt update && apt upgrade -y\
+2024-12-16 14:39:14 | servers | /home/servers | 2024-12-16 14:39:08 sudo apt update && apt upgrade -y
+2024-12-16 14:39:24 | servers | /home/servers | 2024-12-16 14:39:22 sudo apt update && sudo apt upgrade -y
+2024-12-16 14:39:43 | servers | /home/servers | 2024-12-16 14:39:34 sudo apt install openssh-server
+2024-12-16 14:42:16 | servers | /home/servers | 2024-12-16 14:40:26 sudo nano /etc/ssh/sshd_config
+2024-12-16 14:42:23 | servers | /home/servers | 2024-12-16 14:42:23 sudo systemctl restart sshd
+2024-12-16 14:43:23 | servers | /home/servers | 2024-12-16 14:43:23 sudo systemctl list-units --type=service | grep ssh
+2024-12-16 14:43:51 | servers | /home/servers | 2024-12-16 14:43:51 sudo systemctl start sshd
+2024-12-16 14:44:43 | servers | /home/servers | 2024-12-16 14:44:43 which sshd
+2024-12-16 14:44:57 | servers | /home/servers | 2024-12-16 14:44:57 sudo systemctl enable sshd
+2024-12-16 14:46:03 | servers | /home/servers | 2024-12-16 14:46:03 sudo /usr/sbin/sshd
+2024-12-16 14:46:46 | servers | /home/servers | 2024-12-16 14:46:42 sudo apt purge openssh-server -y
+2024-12-16 14:47:04 | servers | /home/servers | 2024-12-16 14:47:04 cat /var/log/bash_history.log 
+2024-12-16 14:48:16 | servers | /home/servers | 2024-12-16 14:47:14 sudo nano /etc/bash.bashrc 
+2024-12-16 15:28:55 | servers | /home/servers | 
+2024-12-16 15:29:00 | servers | /home/servers | 2024-12-16 15:28:59 ping google.com
+2024-12-16 15:30:44 | servers | /home/servers | 2024-12-16 15:29:16 sudo nano /etc/netplan/50-cloud-init.yaml 
+2024-12-16 15:30:49 | servers | /home/servers | 2024-12-16 15:30:49 sudo netplan apply
+2024-12-16 15:32:24 | servers | /home/servers | 2024-12-16 15:31:49 sudo nano /etc/netplan/50-cloud-init.yaml 
+2024-12-16 15:32:27 | servers | /home/servers | 2024-12-16 15:32:26 sudo netplan apply
+2024-12-16 15:33:47 | servers | /home/servers | 2024-12-16 15:33:36 sudo nano /etc/netplan/50-cloud-init.yaml 
+2024-12-16 15:33:48 | servers | /home/servers | 2024-12-16 15:33:47 sudo netplan apply
+2024-12-16 15:34:12 | servers | /home/servers | 2024-12-16 15:33:58 sudo nano /etc/netplan/50-cloud-init.yaml 
+2024-12-16 15:34:14 | servers | /home/servers | 2024-12-16 15:34:13 sudo netplan apply
+2024-12-16 15:34:31 | servers | /home/servers | 2024-12-16 15:34:31 ip route show
+2024-12-16 15:34:59 | servers | /home/servers | 2024-12-16 15:34:56 ping 8.8.8.8
+2024-12-16 15:35:13 | servers | /home/servers | 2024-12-16 15:35:07 ping google.com
+2024-12-16 15:36:20 | servers | /home/servers | 
+2024-12-16 15:36:23 | servers | /home/servers | 2024-12-16 15:36:23 google.com
+2024-12-16 15:36:27 | servers | /home/servers | 2024-12-16 15:36:26 ping google.com
+2024-12-16 15:36:33 | servers | /home/servers | 2024-12-16 15:36:32 ping 8.8.8.8
+2024-12-16 15:36:40 | servers | /home/servers | 2024-12-16 15:36:40 ip route show
+2024-12-16 15:39:23 | servers | /home/servers | 2024-12-16 15:39:21 sudo docker ps
+2024-12-16 15:39:33 | servers | /home/servers | 2024-12-16 15:39:30 sudo docker run apache_server
+2024-12-16 15:39:38 | servers | /home/servers | 2024-12-16 15:39:37 sudo docker start apache_server
+2024-12-16 15:39:47 | servers | /home/servers | 2024-12-16 15:39:47 sudo docker start mysql_server
+2024-12-16 15:46:08 | servers | /home/servers | 2024-12-16 15:46:08 ip addr show
+2024-12-16 15:47:47 | servers | /home/servers | 2024-12-16 15:47:04 sudo nano /etc/netplan/50-cloud-init.yaml .
+2024-12-16 15:47:58 | servers | /home/servers | 2024-12-16 15:47:58 curl http://localhost
+2024-12-16 15:50:16 | servers | /home/servers | 2024-12-16 15:50:16 sudo systemctl status apache2
+2024-12-16 15:53:15 | servers | /home/servers | 2024-12-16 15:53:15 sudo docker ps
+2024-12-16 15:55:04 | servers | /home/servers | 2024-12-16 15:55:04 ping google
+2024-12-16 15:55:07 | servers | /home/servers | 2024-12-16 15:55:06 ping google.com
+2024-12-16 15:55:12 | servers | /home/servers | 2024-12-16 15:55:11 ip addr show
+2024-12-16 16:09:45 | servers | /home/servers | 2024-12-16 16:09:45 routes
+2024-12-16 16:09:49 | servers | /home/servers | 2024-12-16 16:09:49 ip route
+2024-12-16 16:10:14 | servers | /home/servers | 2024-12-16 16:10:12 sudo nano /etc/netplan/50-cloud-init.yaml .
+2024-12-16 16:10:36 | servers | /home/servers | 2024-12-16 16:10:15 sudo nano /etc/netplan/50-cloud-init.yaml
+2024-12-16 18:44:44 | servers | /home/servers | 
+2024-12-16 18:55:20 | servers | /home/servers | 2024-12-16 18:53:52 sudo nano /etc/netplan/50-cloud-init.yaml 
+2024-12-16 19:08:27 | servers | /home/servers | 
+2024-12-16 19:09:41 | servers | /home/servers | 2024-12-16 19:09:41 ip addr show
+2024-12-16 19:10:06 | servers | /home/servers | 2024-12-16 19:10:02 ping google.com
+2024-12-16 19:13:39 | servers | /home/servers | 2024-12-16 19:10:16 sudo nano /etc/netplan/50-cloud-init.yaml 
+2024-12-16 19:14:16 | servers | /home/servers | 2024-12-16 19:14:15 sudo netplan apply
+2024-12-16 19:14:21 | servers | /home/servers | 2024-12-16 19:14:19 ping google.com
+2024-12-16 19:14:22 | servers | /home/servers | 2024-12-16 19:14:22 clear
+2024-12-18 16:13:42 | servers | /home/servers | 
+2024-12-18 16:14:04 | servers | /home/servers | 2024-12-18 16:13:50 exit
+2024-12-18 16:14:20 | servers | /home/servers | 2024-12-18 16:14:18 sudo mount /dev/cdrom /media/cdrom
+2024-12-18 16:20:53 | servers | /home/servers | 2024-12-18 16:13:50 exit
+2024-12-18 16:21:07 | servers | /home/servers | 2024-12-18 16:21:07 mount | grep VBoxGuestAdditions
+2024-12-18 16:21:22 | servers | /home/servers | 2024-12-18 16:21:20 sudo mount /dev/cdrom /mnt
+2024-12-18 16:21:37 | servers | /home/servers | 2024-12-18 16:21:37 sudo /mnt/VBoxLinuxAdditions.iso
+2024-12-18 16:22:05 | servers | /home/servers | 2024-12-18 16:22:05 sudo /mnt/VBoxLinuxAdditions.run
+2024-12-18 16:22:26 | servers | /home/servers | 2024-12-18 16:22:21 sudo apt install bzip2 tar
+2024-12-18 16:22:56 | servers | /home/servers | 2024-12-18 16:22:27 sudo /mnt/VBoxLinuxAdditions.run
+2024-12-18 16:23:21 | servers | /home/servers | 2024-12-18 16:23:12 sudo apt install gcc make perl 
+2024-12-18 16:23:51 | servers | /home/servers | 2024-12-18 16:23:23 sudo /mnt/VBoxLinuxAdditions.run
+2024-12-18 16:25:13 | servers | /home/servers | 2024-12-18 16:25:12 sudo reboot
+2024-12-18 16:26:58 | servers | /home/servers | 2024-12-18 16:25:12 sudo reboot
+2024-12-18 16:29:40 | servers | /home/servers | 2024-12-18 16:29:36 sudo apt install console-setup
+2024-12-18 16:30:16 | servers | /home/servers | 2024-12-18 16:29:59 sudo nano /etc/default/console-setup 
+2024-12-18 16:30:25 | servers | /home/servers | 2024-12-18 16:30:25 sudo setupcon
+2024-12-18 16:30:33 | servers | /home/servers | 2024-12-18 16:30:33 sudo reboot
+2024-12-18 16:30:51 | servers | /home/servers | 2024-12-18 16:30:33 sudo reboot
+2024-12-18 16:30:53 | servers | /home/servers | 2024-12-18 16:30:33 sudo reboot
+2024-12-18 16:32:49 | servers | /home/servers | 2024-12-18 16:30:56 sudo nano /etc/default/console-setup 
+2024-12-18 16:32:50 | servers | /home/servers | 2024-12-18 16:30:56 sudo nano /etc/default/console-setup 
+2024-12-18 16:35:32 | servers | /home/servers | 2024-12-18 16:32:55 man console-setup
+2024-12-18 16:37:50 | servers | /home/servers | 2024-12-18 16:35:35 sudo nano /etc/default/console-setup 
+2024-12-18 16:37:54 | servers | /home/servers | 2024-12-18 16:37:54 sudo setupcon
+2024-12-18 16:38:22 | servers | /home/servers | 2024-12-18 16:38:00 sudo nano /etc/default/console-setup 
+2024-12-18 16:38:23 | servers | /home/servers | 2024-12-18 16:38:23 sudo setupcon
+2024-12-18 16:38:37 | servers | /home/servers | 2024-12-18 16:38:35 ping google.com
+2024-12-18 16:38:37 | servers | /home/servers | 2024-12-18 16:38:35 ping google.com
+2024-12-18 16:38:38 | servers | /home/servers | 2024-12-18 16:38:38 clear
+2024-12-18 17:33:19 | servers | /home/servers | 2024-12-18 16:30:33 sudo reboot
+2024-12-18 17:35:26 | servers | /home/servers | 2024-12-18 16:30:33 sudo reboot
+2024-12-18 17:35:50 | servers | /home/servers | 2024-12-18 17:35:45 sudo mount -f vboxsf sharedf /mnt/sharedf
+2024-12-18 17:36:01 | servers | /home/servers | 2024-12-18 17:36:01 sudo mount -t vboxsf sharedf /mnt/sharedf
+2024-12-18 17:36:36 | servers | /home/servers | 2024-12-18 17:36:36 cd /mnt/sharedf
+2024-12-18 17:36:54 | servers | /home/servers | 2024-12-18 17:36:54 sudo mkdir -p /mnt/sharedf
+2024-12-18 17:36:57 | servers | /home/servers | 2024-12-18 17:36:57 sudo mount -t vboxsf sharedf /mnt/sharedf
+2024-12-18 17:37:03 | servers | /home/servers | 2024-12-18 17:37:03 ls /mnt/sharedf
+2024-12-18 17:38:04 | servers | /home/servers | 2024-12-18 17:37:34 nano /mnt/sharedf/bash.bashrc 
+2024-12-18 17:38:52 | servers | /home/servers | 2024-12-18 17:38:11 sudo nano /etc/bash.bashrc 
+2024-12-18 17:39:43 | servers | /home/servers | 2024-12-18 17:38:11 sudo nano /etc/bash.bashrc 
+servers@servers:/home/servers$ [[2024-12-18 17:39:50]] source /etc/bash.bashrc 
+servers@servers:/home/servers$ [[2024-12-18 17:39:52]] ls
+servers@servers:/home/servers$ [[2024-12-18 17:39:58]] cat /var/log/bash_history.log 
+servers@servers:/home/servers$ [[2024-12-18 17:40:15]] # teste teste
+servers@servers:/home/servers$ [[2024-12-18 17:40:16]] cat /var/log/bash_history.log 
+root@servers:/home/servers$ [[2024-12-18 17:41:10]] exit
+root@servers:/home/servers$ [[2024-12-18 17:41:31]] cat /mnt/sharedf/hist-config.txt >> /etc/bash.bashrc 
+root@servers:/home/servers$ [[2024-12-18 17:41:37]] nano /etc/bash.bashrc 
+root@servers:/home/servers$ [[2024-12-18 17:41:37]] nano /etc/bash.bashrc 
+root@servers:/home/servers$ [[2024-12-18 17:42:20]] clear
+servers@servers:/home/servers$ [[2024-12-18 17:41:10]] sudo su
+servers@servers:/home/servers$ [[2024-12-18 17:49:06]] ip a
+servers@servers:/home/servers$ [[2024-12-18 18:46:39]] clear
+servers@servers:/home/servers$ [[2024-12-18 18:46:40]] ip a
+servers@servers:/home/servers$ [[2024-12-18 18:53:33]] sudo nano /etc/netplan/50-cloud-init.yaml 
+servers@servers:/home/servers$ [[2024-12-18 18:53:33]] sudo nano /etc/netplan/50-cloud-init.yaml 
+servers@servers:/home/servers$ [[2024-12-18 18:56:01]] sudo cp /etc/netplan/50-cloud-init.yaml /mnt/sharedf/default-netplan-config.yaml
+servers@servers:/home/servers$ [[2024-12-18 18:56:52]] ls /etc/netplan/
+servers@servers:/home/servers$ [[2024-12-18 18:57:15]] sudo cat /etc/netplan/50-cloud-init.yaml-2 > /etc/netplan/50-cloud-init.yaml
+servers@servers:/home/servers$ [[2024-12-18 18:57:21]] sudo cat sudo /etc/netplan/50-cloud-init.yaml-2 > /etc/netplan/50-cloud-init.yaml
+root@servers:/home/servers$ [[2024-12-18 17:48:43]] exit
+root@servers:/home/servers$ [[2024-12-18 18:57:43]] cat /etc/netplan/50-cloud-init.yaml-2 > /etc/netplan/50-cloud-init.yaml
+root@servers:/home/servers$ [[2024-12-18 18:57:51]] rm /etc/netplan/50-cloud-init.yaml-2
+root@servers:/home/servers$ [[2024-12-18 18:57:59]] sudo netplan apply
+root@servers:/home/servers$ [[2024-12-18 18:58:41]] nano /etc/netplan/50-cloud-init.yaml 
+root@servers:/home/servers$ [[2024-12-18 18:59:19]] netplan apply
+root@servers:/home/servers$ [[2024-12-18 18:59:25]] ip route
+root@servers:/home/servers$ [[2024-12-18 18:59:46]] ping google.com
+root@servers:/home/servers$ [[2024-12-18 19:00:22]] nano /etc/netplan/50-cloud-init.yaml 
+root@servers:/home/servers$ [[2024-12-18 19:01:35]] netplan apply
+root@servers:/home/servers$ [[2024-12-18 19:01:38]] ip route
+root@servers:/home/servers$ [[2024-12-18 19:02:58]] cp /etc/netplan/50-cloud-init.yaml /mnt/sharedf/netplan-config.yaml
+root@servers:/home/servers$ [[2024-12-18 19:34:52]] ip a
+root@servers:/home/servers$ [[2024-12-18 19:35:15]] nano /etc/netplan/50-cloud-init.yaml 
+root@servers:/home/servers$ [[2024-12-18 19:36:13]] clear
+root@servers:/home/servers$ [[2024-12-18 19:36:14]] ip a
+root@servers:/home/servers$ [[2024-12-18 19:38:01]] ip route
+root@servers:/home/servers$ [[2024-12-18 19:38:02]] clear
+root@servers:/home/servers$ [[2024-12-18 19:38:04]] ip route
+root@servers:/home/servers$ [[2024-12-18 19:39:18]] clear
+root@servers:/home/servers$ [[2024-12-18 19:39:19]] ip route
+root@servers:/home/servers$ [[2024-12-18 19:39:27]] ip link show enp0s8
+root@servers:/home/servers$ [[2024-12-18 19:40:05]] clear
+root@servers:/root$ [[2024-12-18 19:40:36]] cd ~
+root@servers:/root$ [[2024-12-18 19:40:38]] clear
+root@servers:/root$ [[2024-12-18 19:40:44]] sudo iptables -L -n -v
+servers@servers:/home/servers$ [[2024-12-18 16:30:33]] sudo reboot
+servers@servers:/home/servers$ [[2024-12-18 19:45:13]] ping 10.0.100.30
+servers@servers:/home/servers$ [[2024-12-18 19:49:15]] sudo nano /etc/fstab
+servers@servers:/home/servers$ [[2024-12-18 16:30:33]] sudo reboot
+servers@servers:/home/servers$ [[2024-12-18 19:51:27]] ip a
+servers@servers:/home/servers$ [[2024-12-18 19:51:34]] ping google.com
+servers@servers:/home/servers$ [[2024-12-18 19:52:18]] ls /mnt/sharedf/
+servers@servers:/home/servers$ [[2024-12-18 19:59:12]] su
+root@servers:/home/servers$ [[2024-12-18 17:48:43]] exit
+root@servers:/home/servers$ [[2024-12-18 19:59:44]] cp /etc/netplan/50-cloud-init.yaml /etc/netplan/00-config.yaml
+root@servers:/home/servers$ [[2024-12-18 19:59:51]] rm /etc/netplan/50-cloud-init.yaml 
+root@servers:/home/servers$ [[2024-12-18 19:59:55]] netplan apply
+root@servers:/home/servers$ [[2024-12-18 20:00:01]] clear
+root@servers:/home/servers$ [[2024-12-18 20:00:02]] ip a
+root@servers:/home/servers$ [[2024-12-18 20:00:41]] ping 10.0.100.20
+root@servers:/home/servers$ [[2024-12-18 20:00:44]] ping 10.0.100.30
+root@servers:/home/servers$ [[2024-12-18 20:38:17]] clear
+root@servers:/home/servers$ [[2024-12-18 20:38:22]] cd /docker
+root@servers:/home/servers$ [[2024-12-18 20:38:28]] ls /docker
+root@servers:/home/servers$ [[2024-12-18 20:38:31]] docker
+root@servers:/home/servers$ [[2024-12-18 20:38:49]] docker ps
+root@servers:/home/servers$ [[2024-12-18 20:39:27]] docker ps -a
+root@servers:/home/servers$ [[2024-12-18 20:39:41]] docker rm mysql
+root@servers:/home/servers$ [[2024-12-18 20:39:58]] docker rm mysql_server
+root@servers:/home/servers$ [[2024-12-18 20:40:03]] docker rm apache_server
+root@servers:/home/servers$ [[2024-12-18 20:40:05]] docker ps -a
+root@servers:/home/servers$ [[2024-12-18 20:41:11]] tree
+root@servers:/home/servers$ [[2024-12-18 20:41:21]] apt install tree
+root@servers:/home/servers$ [[2024-12-18 20:41:25]] tree
+root@servers:/home/servers$ [[2024-12-18 20:41:54]] mkdir -p docker/apache-app/src
+root@servers:/home/servers$ [[2024-12-18 20:42:02]] mkdir -p docker/mysql
+root@servers:/home/servers/docker$ [[2024-12-18 20:42:06]] cd docker
+root@servers:/home/servers/docker$ [[2024-12-18 20:42:18]] touch docker-compose.yml
+root@servers:/home/servers/docker$ [[2024-12-18 20:42:34]] touch  apache-app/Dockerfile
+root@servers:/home/servers/docker$ [[2024-12-18 20:42:55]] ls
+root@servers:/home/servers/docker$ [[2024-12-18 20:43:01]] rm -r apache-app/
+root@servers:/home/servers$ [[2024-12-18 20:43:06]] cd ..
+root@servers:/home/servers$ [[2024-12-18 20:43:10]] rm -r docker
+root@servers:/home/servers$ [[2024-12-18 20:43:20]] mkdir -p docker/apache-php/src
+root@servers:/home/servers/docker$ [[2024-12-18 20:43:26]] cd docker
+root@servers:/home/servers/docker$ [[2024-12-18 20:43:37]] mkdir -p mysql
+root@servers:/home/servers/docker$ [[2024-12-18 20:43:37]] ls
+root@servers:/home/servers/docker$ [[2024-12-18 20:43:39]] tree
+root@servers:/home/servers/docker$ [[2024-12-18 20:43:56]] touch docker-compose.yml
+root@servers:/home/servers/docker$ [[2024-12-18 20:44:05]] touch apache-php/Dockerfile
+root@servers:/home/servers/docker$ [[2024-12-18 20:44:16]] touch apache-php/src/index.php
+root@servers:/home/servers/docker$ [[2024-12-18 20:44:22]] touch apache-php/src/login.php
+root@servers:/home/servers/docker$ [[2024-12-18 20:44:30]] touch apache-php/src/page.php
+root@servers:/home/servers/docker$ [[2024-12-18 20:44:36]] touch apache-php/src/db.php
+root@servers:/home/servers/docker$ [[2024-12-18 20:44:40]] tree
+root@servers:/home/servers$ [[2024-12-18 20:44:43]] cd ..
+root@servers:/home/servers$ [[2024-12-18 20:44:45]] tree
+root@servers:/home/servers$ [[2024-12-18 20:45:12]] ls
+root@servers:/home/servers$ [[2024-12-18 20:49:51]] tree
+root@servers:/home/servers$ [[2024-12-18 20:50:31]] cat /mnt/sharedf/docker-compose.yml > docker/docker-compose.yml 
+root@servers:/home/servers$ [[2024-12-18 20:50:39]] nano docker/docker-compose.yml 
+root@servers:/home/servers$ [[2024-12-18 20:50:45]] clear
+root@servers:/home/servers$ [[2024-12-18 21:44:39]] mkdir -p docker/apache-php/ssl
+root@servers:/home/servers/docker$ [[2024-12-18 21:44:44]] cd docker
+root@servers:/home/servers/docker$ [[2024-12-18 21:44:44]] ls
+root@servers:/home/servers/docker$ [[2024-12-18 21:44:58]] touch apache-php/ssl/server.crt
+root@servers:/home/servers/docker$ [[2024-12-18 21:45:01]] touch apache-php/ssl/server.key
+root@servers:/home/servers/docker/apache-php/ssl$ [[2024-12-18 21:45:22]] cd apache-php/ssl/
+root@servers:/home/servers/docker/apache-php/ssl$ [[2024-12-18 21:45:30]] openssl
+root@servers:/home/servers/docker/apache-php/ssl$ [[2024-12-18 21:45:32]] clear
+root@servers:/home/servers/docker/apache-php/ssl$ [[2024-12-18 21:46:08]] openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout server.key -out server.crt -subj "/C=BR/ST=Security/L=SecureApp/O=ApacheServer/CN=localhost"
+root@servers:/home/servers/docker/apache-php$ [[2024-12-18 22:22:04]] cd ..
+root@servers:/home/servers/docker/apache-php$ [[2024-12-18 22:22:38]] cp /mnt/sharedf/docker-secure/Dockerfile Dockerfile
+root@servers:/home/servers/docker/apache-php$ [[2024-12-18 22:22:40]] ls
+root@servers:/home/servers/docker/apache-php$ [[2024-12-18 22:22:53]] cat Dockerfile 
+root@servers:/home/servers/docker/apache-php$ [[2024-12-18 22:23:31]] cat /mnt/sharedf/docker-secure/Dockerfile > /home/servers/docker/apache-php/Dockerfile 
+root@servers:/home/servers/docker/apache-php$ [[2024-12-18 22:23:35]] cat Dockerfile 
+root@servers:/home/servers/docker/apache-php$ [[2024-12-18 22:23:35]] cat Dockerfile 
+root@servers:/home/servers/docker/apache-php$ [[2024-12-18 22:23:53]] cat /mnt/sharedf/docker-secure/Dockerfile > /home/servers/docker/apache-php/Dockerfile 
+root@servers:/home/servers/docker/apache-php$ [[2024-12-18 22:23:54]] cat Dockerfile 
+root@servers:/home/servers/docker/apache-php/ssl$ [[2024-12-18 22:24:11]] cd ssl
+root@servers:/home/servers/docker/apache-php/ssl$ [[2024-12-18 22:24:12]] ls
+root@servers:/home/servers/docker/apache-php/ssl$ [[2024-12-18 22:24:23]] mkdir 000-default.conf
+root@servers:/home/servers/docker/apache-php/ssl$ [[2024-12-18 22:24:27]] rm 000-default.conf/
+root@servers:/home/servers/docker/apache-php/ssl$ [[2024-12-18 22:24:30]] rm -r 000-default.conf/
+root@servers:/home/servers/docker/apache-php/ssl$ [[2024-12-18 22:24:38]] touch 000-default.conf
+root@servers:/home/servers/docker/apache-php/ssl$ [[2024-12-18 22:25:05]] cat /mnt/sharedf/docker-secure/redirect.conf > 000-default.conf 
+root@servers:/home/servers/docker/apache-php/ssl$ [[2024-12-18 22:25:08]] cat 000-default.conf 
+root@servers:/home/servers/docker/apache-php/ssl$ [[2024-12-18 22:25:26]] touch 000-default-ssl.conf
+root@servers:/home/servers/docker/apache-php/ssl$ [[2024-12-18 22:25:42]] cat /mnt/sharedf/docker-secure/https.conf > 000-default-ssl.conf 
+root@servers:/home/servers/docker/apache-php/ssl$ [[2024-12-18 22:25:47]] cat 000-default-ssl.conf 
+root@servers:/home/servers/docker/apache-php$ [[2024-12-18 22:26:00]] cd ..
+root@servers:/home/servers/docker/apache-php$ [[2024-12-18 22:26:01]] ls
+root@servers:/home/servers/docker/apache-php/src$ [[2024-12-18 22:26:03]] cd src/
+root@servers:/home/servers/docker/apache-php/src$ [[2024-12-18 22:26:04]] ls
+root@servers:/home/servers/docker/apache-php/src$ [[2024-12-18 22:26:26]] cat /mnt/sharedf/docker-secure/db.php > db.php
+root@servers:/home/servers/docker/apache-php/src$ [[2024-12-18 22:26:34]] cat /mnt/sharedf/docker-secure/login.php > login.php
+root@servers:/home/servers/docker/apache-php/src$ [[2024-12-18 22:26:54]] cat /mnt/sharedf/docker-secure/index.php > index.php
+root@servers:/home/servers/docker/apache-php/src$ [[2024-12-18 22:27:01]] cat /mnt/sharedf/docker-secure/page.php > page.php
+root@servers:/home/servers/docker/apache-php/src$ [[2024-12-18 22:27:02]] ls
+root@servers:/home/servers/docker/apache-php/src$ [[2024-12-18 22:27:07]] cat db.php 
+root@servers:/root$ [[2024-12-18 22:32:42]] cd ~
+root@servers:/root$ [[2024-12-18 22:32:43]] ;s
+root@servers:/root$ [[2024-12-18 22:32:44]] ls
+root@servers:/home/servers$ [[2024-12-18 22:32:55]] cd /home/servers/
+root@servers:/home/servers$ [[2024-12-18 22:32:56]] tree
+root@servers:/home/servers/docker$ [[2024-12-18 22:34:54]] cd docker/
+root@servers:/home/servers/docker$ [[2024-12-18 22:35:00]] mkdir mysql-init
+root@servers:/home/servers/docker$ [[2024-12-18 22:35:14]] nano init.sql
+root@servers:/home/servers/docker$ [[2024-12-18 22:35:14]] nano init.sql
+root@servers:/home/servers/docker$ [[2024-12-18 22:35:25]] ls
+root@servers:/home/servers/docker$ [[2024-12-18 22:35:32]] ls mysql-init/
+root@servers:/home/servers/docker$ [[2024-12-18 22:35:32]] ls
+root@servers:/home/servers/docker$ [[2024-12-18 22:35:53]] touch mysql-init/init.sql
+root@servers:/home/servers/docker$ [[2024-12-18 22:39:56]] cat /mnt/sharedf/docker-secure/mysql-init.sql > mysql-init/init.sql 
+root@servers:/home/servers/docker$ [[2024-12-18 22:40:27]] cat /mnt/sharedf/docker-secure/docker-compose.yml > docker-compose.yml 
+root@servers:/home/servers/docker$ [[2024-12-18 22:40:31]] cat docker-compose.yml 
+root@servers:/home/servers/docker$ [[2024-12-18 22:40:35]] clear
+root@servers:/home/servers/docker$ [[2024-12-18 22:42:51]] ls
+root@servers:/home/servers/docker/mysql-init$ [[2024-12-18 22:42:55]] cd mysql-init/
+root@servers:/home/servers/docker/mysql-init$ [[2024-12-18 22:42:58]] nano init.sql 
+root@servers:/home/servers/docker$ [[2024-12-18 22:43:40]] cd ..
+root@servers:/home/servers/docker$ [[2024-12-18 22:43:45]] nano docker-compose.yml 
+root@servers:/home/servers/docker/mysql-init$ [[2024-12-18 22:44:05]] cd mysql-init/
+root@servers:/home/servers/docker/mysql-init$ [[2024-12-18 22:44:08]] nano init.sql 
+root@servers:/home/servers/docker/mysql-init$ [[2024-12-18 22:44:28]] clear
+root@servers:/home/servers/docker$ [[2024-12-18 22:44:31]] cd ..
+root@servers:/home/servers/docker$ [[2024-12-18 22:44:32]] clear
+root@servers:/home/servers/docker$ [[2024-12-18 22:44:36]] docker-compose down
+root@servers:/home/servers/docker$ [[2024-12-18 22:44:57]] apt install docker-compose
+root@servers:/home/servers/docker$ [[2024-12-18 22:44:57]] apt install docker-compose
+root@servers:/home/servers/docker$ [[2024-12-18 22:46:26]] docker-compose 
+root@servers:/home/servers/docker$ [[2024-12-18 22:46:37]] docker-compose down
+root@servers:/home/servers/docker$ [[2024-12-18 22:47:35]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-18 22:48:14]] curl localhost
+root@servers:/home/servers/docker$ [[2024-12-18 22:51:10]] tree
+root@servers:/home/servers/docker/apache-php$ [[2024-12-18 22:51:18]] cd apache-php/
+root@servers:/home/servers/docker/apache-php$ [[2024-12-18 22:51:23]] cat Dockerfile 
+root@servers:/home/servers/docker/apache-php$ [[2024-12-18 22:51:40]] cat /mnt/sharedf/docker-secure/Dockerfile > Dockerfile 
+root@servers:/home/servers/docker/apache-php$ [[2024-12-18 22:51:43]] cat Dockerfile 
+root@servers:/home/servers/docker$ [[2024-12-18 22:51:49]] cd ..
+root@servers:/home/servers/docker$ [[2024-12-18 22:51:54]] docker-compose down
+root@servers:/home/servers/docker$ [[2024-12-18 22:52:07]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-18 22:58:10]] php
+root@servers:/home/servers/docker$ [[2024-12-18 23:00:00]] docker exec -it apache-php bash
+root@servers:/home/servers/docker$ [[2024-12-18 23:00:31]] docker exec -it apache_php bash
+root@servers:/home/servers/docker$ [[2024-12-18 23:02:58]] docker-compose down
+root@servers:/home/servers/docker$ [[2024-12-18 23:03:06]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-18 23:03:13]] docker-compose down
+root@servers:/home/servers/docker$ [[2024-12-18 23:03:18]] ls
+root@servers:/home/servers/docker$ [[2024-12-18 23:03:36]] cat /mnt/sharedf/docker-secure/mysql-init.sql > mysql-init/init.sql 
+root@servers:/home/servers/docker$ [[2024-12-18 23:03:44]] cat mysql-init/init.sql 
+root@servers:/home/servers/docker$ [[2024-12-18 23:03:52]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-18 23:05:25]] docker exec -it mysql_server mysql -u root -p
+root@servers:/home/servers/docker$ [[2024-12-18 23:11:47]] ls -l ./mysql-init
+root@servers:/home/servers/docker$ [[2024-12-18 23:12:02]] docker logs mysql_server
+root@servers:/home/servers/docker$ [[2024-12-18 23:12:43]] docker volume ls
+root@servers:/home/servers/docker$ [[2024-12-18 23:15:47]] ls -l ./mysql-init/
+root@servers:/home/servers/docker$ [[2024-12-18 23:16:29]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-18 23:16:38]] docker-compose up --build
+root@servers:/home/servers/docker$ [[2024-12-18 23:17:19]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-18 23:17:28]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-18 23:18:24]] ping -c 4 google.com
+root@servers:/home/servers/docker$ [[2024-12-18 23:18:35]] nslookup
+root@servers:/home/servers/docker$ [[2024-12-18 23:18:38]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-18 23:18:38]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-18 23:18:38]] docker-compose up --build -d
+servers@servers:/home/servers$ [[2024-12-18 16:30:33]] sudo reboot
+servers@servers:/home/servers/docker$ [[2024-12-18 23:20:02]] cd docker/
+servers@servers:/home/servers/docker$ [[2024-12-18 23:20:07]] docker-compose down
+root@servers:/home/servers/docker$ [[2024-12-18 17:48:43]] exit
+root@servers:/home/servers/docker$ [[2024-12-18 23:20:24]] docker-compose down
+root@servers:/home/servers/docker$ [[2024-12-18 23:20:35]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-18 23:20:57]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-18 23:21:47]] docker exec -it mysql_server mysql -u root -p
+root@servers:/home/servers/docker$ [[2024-12-18 23:27:55]] docker exec -it apache_php bash
+root@servers:/home/servers/docker$ [[2024-12-18 23:30:17]] docker cp apache_php:/var/www/html/hash.txt ./hash.txt
+root@servers:/home/servers/docker$ [[2024-12-18 23:30:20]] ls
+root@servers:/home/servers/docker$ [[2024-12-18 23:30:45]] cat hash.txt >> mysql-init/init.sql 
+root@servers:/home/servers/docker$ [[2024-12-18 23:30:51]] nano mysql-init/init.sql 
+root@servers:/home/servers/docker$ [[2024-12-18 23:30:51]] nano mysql-init/init.sql 
+root@servers:/home/servers/docker$ [[2024-12-18 23:31:44]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-18 23:31:55]] docker-compose up --build -d
+root@servers:/home/servers/docker$ [[2024-12-18 23:34:00]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-18 23:34:00]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-18 23:34:00]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-18 23:34:00]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-18 23:34:00]] docker-compose down -v
+root@servers:/home/servers/docker$ [[2024-12-18 23:34:59]] cat /mnt/sharedf/docker-secure/login.php > apache-php/src/login.php 
+root@servers:/home/servers/docker$ [[2024-12-18 23:35:09]] docker-compose up --build -d
+servers@servers:/home/servers$ [[2024-12-18 16:30:33]] sudo reboot
+servers@servers:/home/servers$ [[2024-12-20 13:01:19]] ls
+root@servers:/home/servers$ [[2024-12-18 17:48:43]] exit
+root@servers:/home/servers$ [[2024-12-20 13:02:58]] ls /mnt/sharedf/
+root@servers:/home/servers$ [[2024-12-20 13:03:50]] cp -r /etc/netplan/ /mnt/sharedf/servers/etc/netplan/
+root@servers:/home/servers$ [[2024-12-20 13:05:18]] rsync -a /etc/netplan/ /mnt/sharedf/servers/etc/netplan/
+root@servers:/home/servers$ [[2024-12-20 13:06:34]] mkdir -p /mnt/sharedf/servers/etc/netplan
+root@servers:/home/servers$ [[2024-12-20 13:06:37]] rsync -a /etc/netplan/ /mnt/sharedf/servers/etc/netplan/
+root@servers:/home/servers$ [[2024-12-20 13:07:30]] touch /mnt/sharedf/servers/bash.log
