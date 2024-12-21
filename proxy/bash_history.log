@@ -1,0 +1,28 @@
+root@nginx:/home/nginx$ [[2024-12-21 15:47:12]] source /etc/bash.bashrc 
+root@nginx:/home/nginx$ [[2024-12-21 15:47:17]] ls
+root@nginx:/home/nginx$ [[2024-12-21 15:47:25]] cat /var/log/bash_history.log 
+root@nginx:/$ [[2024-12-21 15:50:54]] cd /
+root@nginx:/$ [[2024-12-21 15:50:55]] ls
+root@nginx:/home/nginx$ [[2024-12-21 15:51:17]] cd /home/nginx
+root@nginx:/home/nginx$ 
+root@nginx:/home/nginx$ [[2024-12-21 15:55:21]] apt install netplan.io
+root@nginx:/home/nginx$ [[2024-12-21 15:55:53]] mkdir -p /etc/netplan
+root@nginx:/home/nginx$ [[2024-12-21 15:56:02]] ls /mnt/sharedf
+root@nginx:/home/nginx$ [[2024-12-21 15:56:27]] cat /mnt/sharedf/netplan-config.yaml 
+root@nginx:/home/nginx$ [[2024-12-21 15:56:33]] ip a
+root@nginx:/home/nginx$ [[2024-12-21 15:57:30]] cp /mnt/sharedf/netplan-config.yaml /etc/netplan/00-config.yaml
+root@nginx:/home/nginx$ [[2024-12-21 15:57:38]] nano /etc/netplan/00-config.yaml 
+root@nginx:/home/nginx$ [[2024-12-21 16:08:44]] nano /etc/netplan/00-config.yaml 
+root@nginx:/home/nginx$ 
+root@nginx:/home/nginx$ [[2024-12-21 16:31:26]] ip -brief addr > /mnt/sharedf/ip-proxy.txt
+root@nginx:/home/nginx$ [[2024-12-21 16:33:23]] rsync -a /etc /mnt/sharedf/proxy/etc
+root@nginx:/home/nginx$ [[2024-12-21 16:33:52]] apt install rsync
+root@nginx:/home/nginx$ [[2024-12-21 16:33:57]] rsync -a /etc /mnt/sharedf/proxy/etc
+root@nginx:/home/nginx$ [[2024-12-21 16:34:30]] mkdir -p /mnt/sharedf/proxy/etc
+root@nginx:/home/nginx$ [[2024-12-21 16:34:42]] mkdir -p /mnt/sharedf/proxy/home/nginx/
+root@nginx:/home/nginx$ [[2024-12-21 16:34:53]] mkdir -p /mnt/sharedf/proxy/var/log/
+root@nginx:/home/nginx$ [[2024-12-21 16:34:56]] rsync -a /etc /mnt/sharedf/proxy/etc
+root@nginx:/home/nginx$ [[2024-12-21 16:38:12]] clear
+root@nginx:/home/nginx$ [[2024-12-21 16:38:26]] rsync -a /etc/netplan /mnt/sharedf/proxy/etc/netplan
+root@nginx:/home/nginx$ [[2024-12-21 16:38:53]] rsync -a /etc/netplan /mnt/sharedf/proxy/etc/
+root@nginx:/home/nginx$ [[2024-12-21 16:39:40]] ls -a /var/log
