@@ -6,18 +6,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $stmt = $pdo->prepare("SELECT * FROM users WHERE username = :username");
-    $stmt->bindParam(':username', $username);
-    $stmt->execute();
+    // Consulta direta sem prepared statement
+    try {
+        $stmt = $pdo->query("SELECT * FROM users WHERE username = '$username'");
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    $user = $stmt->fetch(PDO::FETCH_ASSOC);
-
-    if ($user && password_verify($password, $user['password'])) {
-        $_SESSION['user_id'] = $user['id'];
-        header("Location: dex.php");
-        exit;
-    } else {
-        $error = "Usuário ou senha incorretos.";
+        if ($user && $password === $user['password']) {
+            $_SESSION['user_id'] = $user['id'];
+            header("Location: dex.php");
+            exit;
+        } else {
+            // Mensagem de erro com informações sensíveis
+            $error = "Erro: Usuário não encontrado ou senha inválida.";
+        }
+    } catch (Exception $e) {
+        // Exibe exceção diretamente ao usuário
+        $error = $e->getMessage();
     }
 }
 ?>
@@ -34,7 +38,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <div class="login-container">
     <h1>Login</h1>
     <?php if (isset($error)): ?>
-        <p class="error-message"><?= htmlspecialchars($error) ?></p>
+        <!-- Exposição de erro sem escapar -->
+        <p class="error-message"><?= $error ?></p>
     <?php endif; ?>
     <form method="POST" action="index.php">
         <input type="text" name="username" placeholder="Usuário" required>

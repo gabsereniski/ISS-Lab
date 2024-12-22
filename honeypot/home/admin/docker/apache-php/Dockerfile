@@ -1,22 +1,26 @@
-FROM php:5.6-apache 
-# Versão antiga e desatualizada do PHP
+FROM php:5.6-apache
 
-# Instalar extensões necessárias para MySQL
-RUN apt-get update && apt-get install -y wget \
-    && docker-php-ext-install mysqli pdo_mysql
+# Ajustar os repositórios para versões arquivadas e remover os inválidos
+RUN sed -i 's/deb.debian.org/archive.debian.org/g' /etc/apt/sources.list && \
+    sed -i '/security.debian.org/d' /etc/apt/sources.list && \
+    sed -i '/stretch-updates/d' /etc/apt/sources.list && \
+    echo "Acquire::Check-Valid-Until false;" > /etc/apt/apt.conf.d/99no-check-valid-until && \
+    apt-get update && \
+    apt-get install -y wget && \
+    docker-php-ext-install mysqli pdo_mysql && \
+    apt-get install -y openssl
 
-# Configuração insegura de PHP
-RUN echo "display_errors=On" >> /usr/local/etc/php/php.ini
-RUN echo "error_reporting=E_ALL" >> /usr/local/etc/php/php.ini
-RUN echo "allow_url_fopen=On" >> /usr/local/etc/php/php.ini # Permitir fopen remoto
-RUN echo "disable_functions=" >> /usr/local/etc/php/php.ini # Nenhuma função desabilitada
 
-# Adicionar diretórios inseguros para testes
-RUN mkdir /var/www/html/uploads && chmod 777 /var/www/html/uploads
-RUN mkdir /var/www/html/backup && chmod 777 /var/www/html/backup
+# Copiar certificados SSL e configurações do Apache
+COPY ssl/server.crt /etc/ssl/certs/server.crt
+COPY ssl/server.key /etc/ssl/private/server.key
+COPY ssl/000-default.conf /etc/apache2/sites-available/000-default.conf
+COPY ssl/000-default-ssl.conf /etc/apache2/sites-available/000-default-ssl.conf
 
-# Expor informações sensíveis como teste
-RUN echo "<?php phpinfo(); ?>" > /var/www/html/phpinfo.php
+# Habilitar módulos do Apache
+RUN a2enmod ssl rewrite
+RUN a2ensite 000-default
+RUN a2ensite 000-default-ssl
 
-# Definir diretório de trabalho
+# Definir o diretório de trabalho
 WORKDIR /var/www/html

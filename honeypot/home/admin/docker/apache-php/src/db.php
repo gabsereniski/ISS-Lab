@@ -2,7 +2,7 @@
 $host = "mysql_server";
 $dbname = "secure_db";
 $user = "user";
-$password = "user";
+$password = "password";
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $user, $password);

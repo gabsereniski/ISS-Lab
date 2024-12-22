@@ -12,7 +12,7 @@ if (!isset($_SESSION['user_id'])) {
     </head>
     <body>
     <div class='container'>
-        <h1>Acesso Negado</h1>
+        <h1>Acesso Negado!!!</h1>
         <p>Você não tem permissão para acessar esta página. Faça login primeiro.</p>
         <a href='index.php'>Voltar ao Início</a>
     </div>
@@ -30,9 +30,8 @@ if (isset($_GET['logout'])) {
 
 // Obter informações do usuário logado
 $user_id = $_SESSION['user_id'];
-$stmt = $pdo->prepare("SELECT full_name, is_admin FROM users WHERE id = :user_id");
-$stmt->bindParam(':user_id', $user_id);
-$stmt->execute();
+$query_user = "SELECT full_name, is_admin FROM users WHERE id = $user_id"; // ID inserido diretamente na query
+$stmt = $pdo->query($query_user);
 $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
 // Variáveis do usuário
@@ -45,7 +44,7 @@ $query = $is_admin ? "SELECT * FROM pokemon" : "
     SELECT p.*
     FROM pokemon p
     JOIN user_pokemon up ON p.pokedex_number = up.pokemon_id
-    WHERE up.user_id = :user_id";
+    WHERE up.user_id = $user_id"; // Inserção direta do ID do usuário
 
 if (!empty($search)) {
     $query .= $is_admin ? " WHERE " : " AND ";
@@ -54,36 +53,13 @@ if (!empty($search)) {
     if (strtolower($search) === "legendary") {
         $query .= "is_legendary = 1";
     } else {
-        $query .= "
-            (pokedex_number LIKE :search OR
-            name LIKE :search OR
-            attack LIKE :search OR
-            defense LIKE :search OR
-            hp LIKE :search OR
-            speed LIKE :search OR
-            sp_attack LIKE :search OR
-            sp_defense LIKE :search OR
-            type1 LIKE :search OR
-            type2 LIKE :search OR
-            abilities LIKE :search OR
-            capture_rate LIKE :search OR
-            weight_kg LIKE :search OR
-            height_m LIKE :search OR
-            classfication LIKE :search OR
-            generation LIKE :search OR
-            is_legendary LIKE :search)";
+        // Injeta diretamente o valor de $search sem o LIKE
+        $query .= "$search";
     }
 }
 
-$stmt = $pdo->prepare($query);
-if (!empty($search) && strtolower($search) !== "legendary") {
-    $searchTerm = "%$search%";
-    $stmt->bindParam(':search', $searchTerm);
-}
-if (!$is_admin) {
-    $stmt->bindParam(':user_id', $user_id);
-}
-$stmt->execute();
+// Executar a consulta diretamente, sem prepared statements
+$stmt = $pdo->query($query);
 $pokemons = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 // Página HTML com estilização

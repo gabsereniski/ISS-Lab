@@ -5,7 +5,8 @@ services:
     container_name: apache_php
     build: ./apache-php
     ports:
-      - "80:80" # HTTP apenas, sem HTTPS
+      - "80:80" 
+      - "443:443"
     volumes:
       - ./apache-php/src:/var/www/html # Código da aplicação
     depends_on:
@@ -24,7 +25,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: "root" # Senha fraca
       MYSQL_DATABASE: "secure_db"
-      MYSQL_USER: "secure_user"
+      MYSQL_USER: "user"
       MYSQL_PASSWORD: "password" # Senha comum
     volumes:
       - mysql_data:/var/lib/mysql
@@ -33,7 +34,7 @@ services:
       - "3307:3306"
     restart: unless-stopped
     networks:
-      - honeypot_net
+      - servers_net
     command: --local-infile=1 --secure-file-priv=/tmp # Configuração insegura
 
 volumes:
