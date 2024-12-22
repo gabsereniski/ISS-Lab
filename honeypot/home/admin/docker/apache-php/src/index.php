@@ -7,22 +7,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $_POST['password'];
 
     // Consulta direta sem prepared statement
-    try {
-        $stmt = $pdo->query("SELECT * FROM users WHERE username = '$username'");
-        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+    $stmt = $pdo->query("SELECT * FROM users WHERE username = '$username'");
+    $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        if ($user && $password === $user['password']) {
-            $_SESSION['user_id'] = $user['id'];
-            header("Location: dex.php");
-            exit;
-        } else {
-            // Mensagem de erro com informações sensíveis
-            $error = "Erro: Usuário não encontrado ou senha inválida.";
-        }
-    } catch (Exception $e) {
-        // Exibe exceção diretamente ao usuário
-        $error = $e->getMessage();
+    if ($user && $password === $user['password']) {
+        $_SESSION['user_id'] = $user['id'];
+        header("Location: dex.php");
+        exit;
+    } else {
+        // Mensagem de erro com informações sensíveis
+        $error = "Erro: Usuário não encontrado ou senha inválida.";
     }
+    
 }
 ?>
 

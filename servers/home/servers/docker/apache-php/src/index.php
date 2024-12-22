@@ -17,7 +17,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header("Location: dex.php");
         exit;
     } else {
+        http_response_code(401);
         $error = "Usuário ou senha incorretos.";
+
     }
 }
 ?>
