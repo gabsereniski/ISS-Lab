@@ -7,14 +7,14 @@ network:
     version: 2
     ethernets:
         enp0s3:
-            dhcp4: True
+            dhcp4: true
 
-        enp0s8: # prod
+        enp0s8: # honey
           dhcp4: no
           addresses:
-            - 10.0.100.20/24
+            - 10.0.101.30/24
 
-        enp0s9: # mgmt
+        enps9: # mgmt
           dhcp4: no
           addresses:
-            - 10.0.102.20/24
+            - 10.0.102.30/24
